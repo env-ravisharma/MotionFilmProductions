@@ -135,6 +135,8 @@ body {
     text-align: center;
     z-index: 1;
     animation: fadeInUp 1s ease-out;
+    padding: 2rem;
+    max-width: 900px;
 }
 
 @keyframes fadeInUp {
