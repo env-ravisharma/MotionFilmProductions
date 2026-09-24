@@ -342,36 +342,101 @@ section {
 }
 
 .contact-info {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    width: 100%;
+    max-width: 800px;
 }
 
-.contact-item {
+.contact-card {
+    background: var(--gradient-dark);
+    padding: 2.5rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid rgba(66, 153, 225, 0.2);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--light-blue));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(66, 153, 225, 0.3);
+    border-color: var(--accent-blue);
+}
+
+.contact-card:hover::before {
+    transform: scaleX(1);
+}
+
+.contact-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+    border-radius: 50%;
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 8px 20px rgba(66, 153, 225, 0.4);
+    transition: all 0.4s ease;
+}
+
+.contact-card:hover .contact-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 30px rgba(66, 153, 225, 0.6);
 }
 
 .contact-icon {
-    font-size: 2rem;
-    min-width: 50px;
+    font-size: 2.5rem;
 }
 
-.contact-item h3 {
+.contact-card h3 {
     color: var(--light-blue);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.contact-item a,
-.contact-item p {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.contact-item a:hover {
+.contact-phone {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: var(--accent-blue);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.contact-phone:hover {
+    color: var(--light-blue);
+    transform: scale(1.05);
+}
+
+.contact-location {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.contact-note {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
 }
 
 .contact-form {
