@@ -6,16 +6,18 @@
 }
 
 :root {
-    --primary-dark: #0a1628;
-    --primary-blue: #1a365d;
-    --secondary-blue: #2c5282;
-    --accent-blue: #4299e1;
-    --light-blue: #90cdf4;
-    --text-light: #f7fafc;
-    --text-muted: #a0aec0;
+    --primary-dark: #000000;
+    --primary-black: #0a0a0a;
+    --secondary-black: #1a1a1a;
+    --accent-gold: #d4af37;
+    --light-gold: #f4d03f;
+    --dark-gold: #b8860b;
+    --text-light: #ffffff;
+    --text-muted: #cccccc;
     --white: #ffffff;
-    --gradient-dark: linear-gradient(135deg, #0a1628 0%, #1a365d 100%);
-    --gradient-blue: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+    --gradient-dark: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    --gradient-gold: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+    --gradient-black: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
 }
 
 html {
@@ -38,7 +40,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: rgba(10, 22, 40, 0.95);
+    background-color: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
@@ -46,7 +48,7 @@ body {
     right: 0;
     z-index: 1000;
     padding: 1rem 0;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 20px rgba(212, 175, 55, 0.3);
 }
 
 .navbar .container {
@@ -58,7 +60,7 @@ body {
 .nav-brand h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    background: linear-gradient(135deg, var(--accent-blue), var(--light-blue));
+    background: linear-gradient(135deg, var(--accent-gold), var(--light-gold));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -85,12 +87,12 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--accent-blue);
+    background: var(--accent-gold);
     transition: width 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: var(--accent-blue);
+    color: var(--accent-gold);
 }
 
 .nav-menu a:hover::after {
@@ -128,7 +130,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, rgba(66, 153, 225, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
 }
 
 .hero-content {
@@ -154,7 +156,7 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--accent-blue), var(--light-blue));
+    background: linear-gradient(135deg, var(--accent-gold), var(--light-gold));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -168,7 +170,7 @@ body {
 
 .hero-location {
     font-size: 1.2rem;
-    color: var(--accent-blue);
+    color: var(--accent-gold);
     margin-bottom: 2rem;
 }
 
@@ -192,24 +194,24 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+    background: linear-gradient(135deg, var(--accent-gold), var(--dark-gold));
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(66, 153, 225, 0.4);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(66, 153, 225, 0.6);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--accent-blue);
-    border: 2px solid var(--accent-blue);
+    color: var(--accent-gold);
+    border: 2px solid var(--accent-gold);
 }
 
 .btn-secondary:hover {
-    background: var(--accent-blue);
+    background: var(--accent-gold);
     color: var(--white);
 }
 
@@ -223,7 +225,7 @@ section {
     font-weight: 700;
     text-align: center;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, var(--accent-blue), var(--light-blue));
+    background: linear-gradient(135deg, var(--accent-gold), var(--light-gold));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -238,7 +240,7 @@ section {
 
 /* Services Section */
 .services {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-black);
 }
 
 .services-grid {
@@ -248,18 +250,18 @@ section {
 }
 
 .service-card {
-    background: var(--gradient-blue);
+    background: var(--gradient-black);
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease;
-    border: 1px solid rgba(66, 153, 225, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(66, 153, 225, 0.3);
-    border-color: var(--accent-blue);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    border-color: var(--accent-gold);
 }
 
 .service-icon {
@@ -270,7 +272,7 @@ section {
 .service-card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--light-blue);
+    color: var(--light-gold);
 }
 
 .service-card p {
@@ -280,7 +282,7 @@ section {
 
 /* About Section */
 .about {
-    background-color: var(--primary-dark);
+    background-color: var(--primary-black);
 }
 
 .about-content {
@@ -310,7 +312,7 @@ section {
 }
 
 .feature-icon {
-    color: var(--accent-blue);
+    color: var(--accent-gold);
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -324,18 +326,18 @@ section {
     width: 100%;
     max-width: 400px;
     height: 400px;
-    background: var(--gradient-blue);
+    background: var(--gradient-black);
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 5rem;
-    border: 2px solid rgba(66, 153, 225, 0.3);
+    border: 2px solid rgba(212, 175, 55, 0.3);
 }
 
 /* Contact Section */
 .contact {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-black);
 }
 
 .contact-content {
@@ -356,7 +358,7 @@ section {
     padding: 2.5rem;
     border-radius: 20px;
     text-align: center;
-    border: 2px solid rgba(66, 153, 225, 0.2);
+    border: 2px solid rgba(212, 175, 55, 0.2);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -369,15 +371,15 @@ section {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--light-blue));
+    background: linear-gradient(90deg, var(--accent-gold), var(--light-gold));
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
 
 .contact-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(66, 153, 225, 0.3);
-    border-color: var(--accent-blue);
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+    border-color: var(--accent-gold);
 }
 
 .contact-card:hover::before {
@@ -387,19 +389,19 @@ section {
 .contact-icon-wrapper {
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, var(--accent-blue), var(--secondary-blue));
+    background: linear-gradient(135deg, var(--accent-gold), var(--dark-gold));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    box-shadow: 0 8px 20px rgba(66, 153, 225, 0.4);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
     transition: all 0.4s ease;
 }
 
 .contact-card:hover .contact-icon-wrapper {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 12px 30px rgba(66, 153, 225, 0.6);
+    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.6);
 }
 
 .contact-icon {
@@ -407,7 +409,7 @@ section {
 }
 
 .contact-card h3 {
-    color: var(--light-blue);
+    color: var(--light-gold);
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 700;
@@ -417,14 +419,14 @@ section {
     display: block;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--accent-blue);
+    color: var(--accent-gold);
     text-decoration: none;
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
 }
 
 .contact-phone:hover {
-    color: var(--light-blue);
+    color: var(--light-gold);
     transform: scale(1.05);
 }
 
@@ -445,7 +447,7 @@ section {
     background: var(--gradient-dark);
     padding: 2rem;
     border-radius: 15px;
-    border: 1px solid rgba(66, 153, 225, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .form-group {
@@ -458,7 +460,7 @@ section {
     width: 100%;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(66, 153, 225, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.3);
     border-radius: 8px;
     color: var(--text-light);
     font-size: 1rem;
@@ -469,8 +471,8 @@ section {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 10px rgba(66, 153, 225, 0.3);
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
 }
 
 .form-group select {
@@ -483,9 +485,9 @@ section {
 
 /* Footer */
 .footer {
-    background-color: var(--primary-dark);
+    background-color: var(--primary-black);
     padding: 3rem 0 1rem;
-    border-top: 1px solid rgba(66, 153, 225, 0.2);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .footer-content {
@@ -496,7 +498,7 @@ section {
 }
 
 .footer-brand h3 {
-    color: var(--light-blue);
+    color: var(--light-gold);
     margin-bottom: 0.5rem;
 }
 
@@ -506,7 +508,7 @@ section {
 
 .footer-links h4,
 .footer-contact h4 {
-    color: var(--light-blue);
+    color: var(--light-gold);
     margin-bottom: 1rem;
 }
 
@@ -525,7 +527,7 @@ section {
 }
 
 .footer-links a:hover {
-    color: var(--accent-blue);
+    color: var(--accent-gold);
 }
 
 .footer-contact p {
@@ -536,7 +538,7 @@ section {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(66, 153, 225, 0.2);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .footer-bottom p {
@@ -550,7 +552,7 @@ section {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: var(--primary-dark);
+        background-color: var(--primary-black);
         width: 100%;
         text-align: center;
         transition: 0.3s;
